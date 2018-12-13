@@ -1,0 +1,259 @@
+a {
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.screen {
+    width: 100vw;
+    height: 100vh;
+}
+
+.center-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.cover {
+    background-image: url('/images/background.png');
+    background-size: cover;
+    position: absolute;
+
+}
+
+
+.login-logo {
+    height: 65px;
+    width: 245px;
+    background-image: url('/images/logo.png');
+    z-index: 1;
+    margin: 60px;
+}
+
+.login-button {
+    background-color: #99cc33;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 13pt;
+    padding: 1.2vh 9vw;
+    border-radius: 5px;
+    z-index: 2;
+    line-height: 1.875;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.login-button:hover,
+a .login-button:active {
+    background-color: #86b300;
+    color: #FFF;
+}
+
+.height {
+    height: 120px;
+}
+
+.logout {
+    padding-top: 60px;
+    color: #2f3254;
+}
+
+.logout:hover {
+    color: #99cc33;
+}
+
+.left-background {
+    background-image: url('/images/left-background.png');
+    height: 667px;
+
+}
+
+.by {
+    color: white;
+    text-shadow: -1px 0 #6f747d, 0 1px #6f747d, 1px 0 #6f747d, 0 -1px #6f747d;
+    font-family: "Roboto", sans-serif;
+    font-size: 10pt;
+
+}
+
+.task {
+    color: white;
+    text-shadow: -1px 0 #6f747d, 0 1px #6f747d, 1px 0 #6f747d, 0 -1px #6f747d;
+    font-family: "Roboto", sans-serif;
+    font-size: 30pt;
+}
+
+.title {
+    color: black;
+    font-family: "Roboto", sans-serif;
+    font-size: 20pt;
+    word-wrap: break-word;
+}
+
+.number {
+    color: #999999;
+    font-size: 20px;
+}
+
+.gray {
+    background-color: #f5f5f5;
+
+}
+
+.closed {
+    color: #a3a3a3;
+
+}
+
+.closed:hover {
+    color: #99cc33;
+}
+
+.box {
+    background-color: #FFFFFF;
+    margin: 20px 20px;
+    padding: 20px 20px;
+    border: 1px solid #e3e3e3;
+    box-shadow: 0px 1px #e3e3e3;
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+.overflow {
+    overflow: auto;
+    height: 500px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #b8b8b8;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+
+.box2 {
+    background-color: #FFFFFF;
+    width: 960px;
+    margin: 20px 20px;
+    padding: 20px 20px;
+    border: 1px solid #e3e3e3;
+    box-shadow: 0px 1px #e3e3e3;
+    border-radius: 3px;
+    font-size: 13px;
+
+}
+
+.box3 {
+    background-color: #FFFFFF;
+    width: 890px;
+    margin: 20px 20px;
+    padding: 20px 20px;
+    border: 1px solid #e3e3e3;
+    box-shadow: 0px 1px #e3e3e3;
+    border-radius: 3px;
+    font-size: 13px;
+
+}
+
+.page {
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border: none;
+    margin: 40px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.page-i {
+    border-radius: 50%;
+    background-color: white;
+    color: #333333;
+    box-shadow: 0px 1px #e3e3e3;
+    padding: 8px 13px 8px 13px;
+    margin: 5px;
+    font-size: 9pt;
+}
+
+.page-i:hover {
+    background-color: #99cc33;
+    color: white;
+    text-decoration: none;
+
+}
+
+
+.active {
+    background-color: #99cc33;
+    color: white;
+    text-decoration: none;
+    padding: 8px 13px 8px 13px;
+    margin: 5px;
+    font-size: 9pt;
+}
+
+
+.isDisabled {
+    color: #a3a3a3 !important;
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+.state {
+    background-color: #99cc33;
+    color: white;
+    text-transform: uppercase;
+    padding: 6px 6px;
+    border-bottom: 1px solid #7faa29;
+    border-radius: 2px;
+}
+
+.back-issues {
+    padding: 30px 75px;
+}
+
+.body {
+    color: #666666;
+    font-size: 9pt;
+    word-wrap: break-word;
+}
+
+.inline {
+    display: inline-block !important;
+}
+
+
+.small-text {
+    color: #cdcdcd;
+    font-size: 11px;
+}
+
+.small-text-link {
+    color: #99cc33;
+}
+
+.small-text-link:hover {
+    color: #99cc33;
+    text-decoration: underline;
+}
