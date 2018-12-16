@@ -28,7 +28,7 @@
                 </div>
                 <div class="col-sm"><span class="state"><img src="{{ asset('/images/exclamation-mark-white.png') }}"
                             alt=""> {{ $issue['state'] }} </span>&nbsp; &nbsp;
-                    <a class="small-text-link" href="{{ $issue['url'] }}">{{ $issue['user']['login']}}</a> <span class="small-text">opened
+                    <a class="small-text-link" href="#">{{ $issue['user']['login']}}</a> <span class="small-text">opened
                         this issue {{ Carbon\Carbon::parse($issue['created_at'])->diffForHumans() }} {{
                         $issue['comments'] }} comment</span>
 
