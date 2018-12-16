@@ -2,7 +2,7 @@
 
 composer install <br>
 Add you github client_id and secret in .env<br>
-Dont forget on Authorization callback url add /callback link
+Dont forget on Authorization callback url add /callback link<br>
 php artisan serve<br>
 
 
