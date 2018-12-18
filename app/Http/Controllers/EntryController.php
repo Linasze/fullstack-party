@@ -24,21 +24,25 @@ class EntryController extends Controller
         if($_SERVER['REQUEST_METHOD']== 'GET'){
             $issue_number = $_GET['issue'];
              
-            $options = ['http' => [
-                'method' => 'GET',
-                'header' => ['User-Agent: PHP']
-            ]
-            ];
-            $context = stream_context_create($options);
+            $curl = curl_init();
 
-            $url1 = "https://api.github.com/repos/$this->repo/issues/$issue_number?client_id=$this->client_id&client_secret=$this->secret";
-            $issue = file_get_contents($url1, false, $context);
+            curl_setopt($curl, CURLOPT_URL, "https://api.github.com/repos/$this->repo/issues/$issue_number?client_id=$this->client_id&client_secret=$this->secret");
+            curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($curl, CURLOPT_HEADER, false);
+            curl_setopt($curl, CURLOPT_USERAGENT, true);
+            $issue = curl_exec($curl);
             $issue = json_decode($issue, true);
            
-            $url2 = "https://api.github.com/repos/$this->repo/issues/$issue_number/comments?client_id=$this->client_id&client_secret=$this->secret";
-            $comments = file_get_contents($url2, false, $context);
+
+            curl_setopt($curl, CURLOPT_URL, "https://api.github.com/repos/$this->repo/issues/$issue_number/comments?client_id=$this->client_id&client_secret=$this->secret");
+            curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($curl, CURLOPT_HEADER, false);
+            curl_setopt($curl, CURLOPT_USERAGENT, true);
+            $comments = curl_exec($curl);
             $comments = json_decode($comments, true);
             
+            curl_close($curl);
+
             return view('entry')->with([
                 'issue' => $issue,
                 'comments' => $comments    
