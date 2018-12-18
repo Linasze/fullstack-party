@@ -48,7 +48,7 @@
                         @for($page=1; $page <= $total_open/$per_page; $page++) 
                         <li><a class="page-i {{ (isset($_GET['page']) && $_GET['page'] == $page ? 'active' : '') }}" href="?page={{ $page }}"> {{ $page }} </a></li>
                         @endfor
-                            <li class="page-item"><a class="small-text-link  {{(isset($_GET['page']) && $_GET['page'] == round($total_open/$per_page-1) ? 'isDisabled' : '')}}" href="?page={{ (isset($_GET['page']) ? ($_GET['page'] > 1 ? $_GET['page']+1 : $_GET['page']) : '2') }}">Next</a></li>
+                            <li class="page-item"><a class="small-text-link  {{(isset($_GET['page']) && $_GET['page'] == round($total_open/$per_page-1) ? 'isDisabled' : '')}}" href="?page={{ (isset($_GET['page']) ? ($_GET['page'] > 1 ? $_GET['page']+1 : $_GET['page']+1) : '2') }}">Next</a></li>
                     </ul>
                 </nav>
 
